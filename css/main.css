@@ -468,10 +468,6 @@ body {
 ! */
 
 @media screen and (min-width: 1000px) {
-  body {
-    /* font-size: 30px;
-    color: red; */
-  }
 }
 @media screen and (max-width: 1023px) {
   .client-title {
@@ -576,9 +572,9 @@ body {
     width: 100%;
   }
   .client-item {
-    width: 100%;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
