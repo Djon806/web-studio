@@ -1,0 +1,102 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.main {
+  padding-top: 60px;
+}
+
+.portfolio-button-list {
+  display: flex;
+  margin-bottom: 50px;
+  gap: 8px;
+  justify-content: center;
+}
+
+.button {
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #212121;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: 0.48px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+  transition: background-color 200ms linear, color 200ms linear;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #2196f3;
+  color: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio {
+  padding-bottom: 94px;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.portfolio-bottom-block {
+  padding: 20px 24px 20px 24px;
+  border: 1px solid #eee;
+  border-top-width: 0;
+}
+.portfolio-title {
+  color: #212121;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-category {
+  color: #757575;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.02em;
+}
+.portfolio-item:hover .portfolio-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+.portfolio-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fff;
+}
+.portfolio-item {
+  transition: box-shadow 250ms linear;
+}
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+}
+.portfolio-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 250ms linear, transform 250ms linear;
+}
+.portfolio-text {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+}
