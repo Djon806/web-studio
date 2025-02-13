@@ -177,11 +177,15 @@ body {
 .advantages {
   display: flex;
   gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.advantage-item {
+  width: 270px;
 }
 .icon-wrapper {
   border-radius: 4px;
   background: #f5f4fa;
-  width: 270px;
   height: 120px;
   display: flex;
   align-items: center;
@@ -202,6 +206,9 @@ body {
   font-weight: 700;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
+}
+.work-image {
+  width: 100%;
 }
 .work-list {
   display: flex;
@@ -540,11 +547,26 @@ body {
   .footer-field {
     margin-right: 0;
   }
+  .title {
+    text-align: center;
+  }
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .footer-inner-top {
     justify-content: space-between;
+  }
+  .advantage-item {
+    width: calc(100% / 2 - 30px);
   }
 }
 
@@ -555,6 +577,9 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .hero {
+    height: 400px;
+  }
   .footer-field {
     width: 100%;
     max-width: 450px;
@@ -574,6 +599,9 @@ body {
   .client-item {
     display: flex;
     justify-content: center;
+    width: 100%;
+  }
+  .advantage-item {
     width: 100%;
   }
 }
