@@ -19,7 +19,6 @@ body.is-modal-open {
 .modal {
   border-radius: 4px;
   width: 530px;
-  min-height: 580px;
   padding: 40px;
   position: relative;
   background-color: #fff;
@@ -149,4 +148,30 @@ body.is-modal-open .overlay {
 }
 .modal-button:hover {
   background-color: #148cee;
+}
+
+@media screen and (max-width: 767px) {
+  .modal {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 20px 20px 20px 20px;
+  }
+  .modal-title {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .modal-comment {
+    height: 90px;
+  }
+  .modal-policy {
+    margin-bottom: 20px;
+  }
+  .modal-term {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .overlay {
+    padding: 0 15px;
+  }
 }
