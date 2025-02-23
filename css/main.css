@@ -17,7 +17,10 @@ body {
 .navigation {
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
+
 .header-inner {
   height: 80px;
   display: flex;
@@ -32,17 +35,30 @@ body {
   text-decoration: none;
   margin-right: 93px;
 }
+.burger-icon,
+.close-icon {
+  width: 40px;
+  height: 40px;
+}
+.burger-button {
+  background: transparent;
+  border: none;
+}
 
 .accent-logo-word {
   color: #2196f3;
 }
 
-.list,
-.info {
+.list {
   list-style: none;
   display: flex;
   gap: 50px;
   align-items: center;
+}
+.info {
+  list-style: none;
+  display: flex;
+  gap: 50px;
 }
 
 .link {
@@ -559,6 +575,14 @@ body {
     font-size: 26px;
     margin-bottom: 30px;
   }
+  .info {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+  .logo {
+    margin-right: 88px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -604,6 +628,91 @@ body {
   .advantage-item {
     width: 100%;
   }
+  .list,
+  .info {
+    display: none;
+  }
+  .logo {
+    margin: 0;
+  }
+  body.is-menu-open .navigation {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #fff;
+  }
+  .burger-button {
+    padding: 0;
+  }
+  body.is-menu-open .burger-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .close-icon,
+  body.is-menu-open .logo,
+  body.is-menu-open .burger-icon {
+    display: none;
+  }
+  body.is-menu-open .close-icon {
+    display: block;
+  }
+
+  body.is-menu-open .info,
+  body.is-menu-open .list {
+    display: flex;
+  }
+  .list {
+    flex-direction: column;
+    align-items: flex-start;
+    color: #212121;
+    padding: 0;
+    gap: 36px;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    margin-bottom: 302px;
+  }
+  .info {
+    color: #757575;
+    font-size: 24px;
+    font-style: normal;
+    flex-direction: column-reverse;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    margin-bottom: 64px;
+  }
+  .phone-icon,
+  .email-icon {
+    display: none;
+  }
+
+  body.is-menu-open .navigation {
+    padding: 60px 40px 48px;
+  }
+  .phone {
+    color: #2196f3;
+    font-size: 34px;
+  }
+  .link::before {
+    display: none;
+  }
+  .link {
+    padding: 0;
+  }
+  .link.active {
+    color: #2196f3;
+  }
 }
 @media screen and (min-width: 1024px) {
   .footer-field {
@@ -636,5 +745,13 @@ body {
 @media screen and (min-width: 390px) and (max-width: 767px) {
   .client-item {
     width: calc(100% / 2 - 30px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .burger-icon {
+    display: none;
+  }
+  .burger-button {
+    display: none;
   }
 }

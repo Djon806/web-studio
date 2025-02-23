@@ -16,38 +16,47 @@
     <link rel="stylesheet" href="./css/modal.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-inner">
         <nav class="navigation">
           <a class="logo" href="./index.html"
             ><span class="accent-logo-word">Web</span>Studio</a
           >
+          <button class="burger-button">
+            <svg class="burger-icon">
+              <use href="./images/sprite.svg#burger"></use>
+            </svg>
+            <svg class="close-icon">
+              <use href="./images/sprite.svg#menu-close"></use>
+            </svg>
+          </button>
+
           <ul class="list">
-            <li><a class="link" href="./index.html">Studio</a></li>
+            <li><a class="link active" href="./index.html">Studio</a></li>
             <li><a class="link" href="./portfolio.html">Portfolio</a></li>
             <li><a class="link" href="#footer">Contacts</a></li>
           </ul>
+          <ul class="info">
+            <li class="info-item">
+              <a class="email" href="mailto:info@devstudio.com">
+                <svg class="email-icon">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="info-item">
+              <a class="phone" href="callto:+380961111111">
+                <svg class="phone-icon">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
         </nav>
-        <ul class="info">
-          <li class="info-item">
-            <a class="email" href="mailto:info@devstudio.com">
-              <svg class="email-icon">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="info-item">
-            <a class="phone" href="callto:+380961111111">
-              <svg class="phone-icon">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
-    </header>-->
+    </header>
     <section class="hero">
       <h1 class="hero-title">
         Effective solutions <br />
@@ -484,16 +493,23 @@
             ></textarea>
           </div>
           <div class="modal-policy">
-            <input type="checkbox" class="modal-checkbox" />
-            <p class="modal-term">
+            <div class="modal-custom-checkbox-wrapper">
+              <input id="policy" type="checkbox" class="modal-checkbox" />
+              <div class="custom-checkbox-empty"></div>
+              <svg class="custom-checkbox">
+                <use href="./images/sprite.svg#checkbox"></use>
+              </svg>
+            </div>
+            <label for="policy" class="modal-term">
               I agree to the newsletter and accept
               <a href="" class="modal-term-link">the terms of the agreement</a>
-            </p>
+            </label>
           </div>
           <button type="button" class="modal-button">Send</button>
         </form>
       </div>
     </div>
     <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/menu.js"></script>
   </body>
 </html>
